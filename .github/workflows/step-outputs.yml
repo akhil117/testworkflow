@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Step A - Createoutput
+      - name: Step A - Create Output
         id: worker_a
         run: echo "fruit=apple" >> "$GITHUB_OUTPUT"
 
-      - name: Step B - Read Outputs
+      - name: Step B - Read Output
         id: worker_b
         run: |
           MYFRUIT="${{ steps.worker_a.outputs.fruit }}"
